@@ -1,4 +1,5 @@
 import os
+from PIL import Image
 from reportlab.graphics import renderPM
 from svglib.svglib import svg2rlg
 
@@ -26,3 +27,9 @@ def cleaningData(image):
             os.remove(os.path.join(getPathToImage(image), images))
     return print("Images from {} cleaned", format(image))
 
+def resizeAllImages(image,X,Y):
+    for images in os.listdir(getPathToImage(image)):
+        img = Image.open(os.path.join(getPathToImage(image),images))
+        resized_img = img.resize((X,Y))
+        resized_img.save(os.path.join(getPathToImage(image),images + "resized"))
+    return print("Images from {} resized to ({},{})", format(image,X,Y))
