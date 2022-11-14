@@ -2,7 +2,7 @@
 Project which detects clouds and classify them 
 
 ## Installer Flask
-#### 1) Créer un venv (Virtual Environment): Dans le dossier de votre projet, taper la commande :  
+#### 1) Créer un venv (Virtual Environment). Dans le dossier de votre projet, taper la commande :  
   Windows :
   ```
   py -3 -m venv venv
