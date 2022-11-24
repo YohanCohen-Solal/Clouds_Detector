@@ -1,0 +1,50 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.9.13",
+    "heartbeatAt": "2022-11-23T23:48:35.098511",
+    "startedAt": "2022-11-23T23:48:34.445204",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\victo\\Desktop\\Cours\\Projet-Cloud-Detect\\Clouds_Detector\\train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/YohanCohen-Solal/Clouds_Detector.git",
+        "commit": "22fdaef57f5b1375c6ff81f9afc67e6cde56116e"
+    },
+    "email": "81352535+EOS5@users.noreply.github.com",
+    "root": "C:/Users/victo/Desktop/Cours/Projet-Cloud-Detect/Clouds_Detector",
+    "host": "Victor",
+    "username": "victo",
+    "executable": "C:\\Users\\victo\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 3701.0,
+        "min": 0.0,
+        "max": 3701.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3701.0,
+            "min": 0.0,
+            "max": 3701.0
+        }
+    ],
+    "disk": {
+        "total": 931.3984336853027,
+        "used": 318.8717727661133
+    },
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080",
+            "memory_total": 10737418240
+        }
+    ],
+    "memory": {
+        "total": 31.905418395996094
+    }
+}
