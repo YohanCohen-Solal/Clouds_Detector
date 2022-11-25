@@ -23,10 +23,10 @@ IMAGE_HEIGHT = 400
 IMAGE_WIDTH = 400  
 PIN_MEMORY = True
 LOAD_MODEL = False
-TRAIN_IMG_DIR = "./Clouds_Detector/data2/whole_sky_images_train/"
-TRAIN_MASK_DIR = "./Clouds_Detector/data2/annotation/"
-VAL_IMG_DIR = "./Clouds_Detector/data2/whole_sky_images_test/"
-VAL_MASK_DIR = "./Clouds_Detector/data2/annotation_test/"
+TRAIN_IMG_DIR = "./data2/whole_sky_images_train/"
+TRAIN_MASK_DIR = "./data2/annotation/"
+VAL_IMG_DIR = "./data2/whole_sky_images_test/"
+VAL_MASK_DIR = "./data2/annotation_test/"
 
 def train_fn(loader, model, optimizer, loss_fn, scaler):
     loop = tqdm(loader)
@@ -116,7 +116,7 @@ def main():
 
         # print some examples to a folder
         save_predictions_as_imgs(
-            val_loader, model, folder="Clouds_Detector\saved_images", device=DEVICE
+            val_loader, model, folder="saved_images/", device=DEVICE
         )
 
 
