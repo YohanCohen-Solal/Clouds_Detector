@@ -1,4 +1,9 @@
 my_checkpoint.pth.tar
+
+# just in case
+/IA/my_checkpoint.pth.tar 
+/WebApp/node_modules
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
