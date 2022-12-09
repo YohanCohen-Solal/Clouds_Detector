@@ -3,7 +3,7 @@ import torchvision
 from dataset import BasicDataset
 from torch.utils.data import DataLoader
 
-def save_checkpoint(state, filename="my_checkpoint.pth.tar"):
+def save_checkpoint(state, filename="my_checkpoint.pth.h5"):
     print("=> Saving checkpoint")
     torch.save(state, filename)
 
@@ -62,11 +62,13 @@ def check_accuracy(loader, model, device="cuda"):
         for x, y in loader:
             x = x.to(device)
             y = y.to(device).unsqueeze(1)
+            y[y == 100] = 0
+
             preds = torch.sigmoid(model(x))
             preds = (preds > 0.5).float()
             num_correct += (preds == y).sum()
             num_pixels += torch.numel(preds)
-            dice_score += (2 * (preds * y).sum()) / (
+            dice_score += (2 * (num_correct).sum()) / (
                 (preds + y).sum() + 1e-8
             )
 

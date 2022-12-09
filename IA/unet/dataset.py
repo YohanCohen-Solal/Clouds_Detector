@@ -18,7 +18,7 @@ class BasicDataset(Dataset):
         mask_path = os.path.join(self.mask_dir, self.images[index].replace(".jpg", "_mask.jpg"))
         image = np.array(Image.open(img_path).convert("RGB"))
         mask = np.array(Image.open(mask_path).convert("L"), dtype=np.float32)
-        mask[mask == 1.0] = 100.0
+        mask[mask == 100.0] = 0.0
 
         if self.transform is not None:
             augmentations = self.transform(image=image, mask=mask)
