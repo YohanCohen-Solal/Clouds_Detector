@@ -12,6 +12,7 @@ for windows:
 ```command
 py -3 -m venv venv
 ```
+<br>
 <h2>Activate venv</h2>
 
 <p>for macOS/Linux:</p>
