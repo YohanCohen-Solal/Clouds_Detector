@@ -9,7 +9,7 @@ python3 -m venv venv
 ```
 <br>
 for windows:
-```
+```command
 py -3 -m venv venv
 ```
 <h2>Activate venv</h2>
