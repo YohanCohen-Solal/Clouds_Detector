@@ -66,5 +66,5 @@ Run :
 ```
 npm start
 ```
-</br></br></br></br>
+</br></br>
 <h1>You should have "Hello from Flask !!!!!!!!!!!!!!!" written</h1>
