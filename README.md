@@ -26,6 +26,7 @@ venv\Scripts\activate
 <br><br>
 <h2>If necessary, install all these:</h2>
 For Flask part:
+
 ```
 pip install flask
 ```
