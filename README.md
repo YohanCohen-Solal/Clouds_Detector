@@ -1,7 +1,7 @@
 # Clouds_Detector
 Project which detects clouds and classify them 
 
-<h2>Install a venv (Virtual Environment)</h2></br></br>
+<h2>Install a venv (Virtual Environment)</h2>
 
 <p>for macOS/Linux:</p>
 ```command
