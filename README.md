@@ -8,18 +8,18 @@ for macOS/Linux:
 python3 -m venv venv
 ```
 <br>
-<p>for windows:</p>
+for windows:
 ```
 py -3 -m venv venv
 ```
 <h2>Activate venv</h2></br></br>
 
 <p>for macOS/Linux:</p>
-```command
+```
 . venv/bin/activate
 ```
 <p>for windows:</p>
-```command
+```
 venv\Scripts\activate
 ```
 </br></br>
@@ -48,16 +48,16 @@ npm install axios
 cd Clouds_Detector
 ```
 <p>Run :</p>
-```command
+```
 flask run
 ```
 <h2>Second, launch React</h2><br>
 <p>Go to the file Cloud_React :</p>
-```command
+```
 cd Cloud_React
 ```
 <p>Run :</p>
-```command
+```
 npm start
 ```
 </br></br></br></br>
