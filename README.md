@@ -7,7 +7,7 @@ for macOS/Linux:
 ```
 python3 -m venv venv
 ```
-<br><br>
+
 for windows:
 ```command
 py -3 -m venv venv
