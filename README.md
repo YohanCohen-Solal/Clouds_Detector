@@ -3,7 +3,7 @@ Project which detects clouds and classify them
 
 <h2>Install a venv (Virtual Environment)</h2>
 
-<p>for macOS/Linux:</p>
+for macOS/Linux:
 ```
 python3 -m venv venv
 ```
