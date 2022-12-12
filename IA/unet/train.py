@@ -20,14 +20,14 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 BATCH_SIZE = 3
 NUM_EPOCHS = 3
 NUM_WORKERS = 2
-IMAGE_HEIGHT = 400  
-IMAGE_WIDTH = 400  
+IMAGE_HEIGHT = 255  
+IMAGE_WIDTH = 255  
 PIN_MEMORY = True
-LOAD_MODEL = False
-TRAIN_IMG_DIR = "./data2/whole_sky_images_train/"
-TRAIN_MASK_DIR = "./data2/annotation/"
-VAL_IMG_DIR = "./data2/whole_sky_images_test/"
-VAL_MASK_DIR = "./data2/annotation_test/"
+LOAD_MODEL = True
+TRAIN_IMG_DIR = "./IA/data2/whole_sky_images_train/"
+TRAIN_MASK_DIR = "./IA/data2/annotation/"
+VAL_IMG_DIR = "./IA/data2/whole_sky_images_test/"
+VAL_MASK_DIR = "./IA/data2/annotation_test/"
 
 def train_fn(loader, model, optimizer, loss_fn, scaler):
     loop = tqdm(loader)
@@ -35,6 +35,7 @@ def train_fn(loader, model, optimizer, loss_fn, scaler):
     for batch_idx, (data, targets) in enumerate(loop):
         data = data.to(device=DEVICE)
         targets = targets.float().unsqueeze(1).to(device=DEVICE)
+        targets = targets/255
 
         # forward
         with torch.cuda.amp.autocast():
@@ -117,7 +118,7 @@ def main():
 
         # print some examples to a folder
         save_predictions_as_imgs(
-            val_loader, model, folder="saved_images/", device=DEVICE
+            val_loader, model, folder="IA/saved_images/", device=DEVICE
         )
 
 

@@ -57,7 +57,6 @@ def check_accuracy(loader, model, device="cuda"):
     num_pixels = 0
     dice_score = 0
     model.eval()
-
     with torch.no_grad():
         for x, y in loader:
             x = x.to(device)
@@ -73,7 +72,7 @@ def check_accuracy(loader, model, device="cuda"):
             )
 
     print(
-        f"Got {num_correct}/{num_pixels} with acc {num_correct/num_pixels*100:.2f}"
+        f"Got {num_correct}/{num_pixels} with acc {(num_correct/num_pixels)*100:.2f}"
     )
     print(f"Dice score: {dice_score/len(loader)}")
     model.train()

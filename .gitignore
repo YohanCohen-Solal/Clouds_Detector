@@ -1,4 +1,4 @@
-my_checkpoint.pth.tar
+my_checkpoint.pth.h5
 
 # just in case
 /IA/my_checkpoint.pth.tar 
