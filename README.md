@@ -24,26 +24,26 @@ venv\Scripts\activate
 </br></br>
 <h2>If necessary, install all these:</h2></br></br>
 <p>for Flask part:</p>
-```command
+```
 pip install flask
 ```
 <br>
-```command
+```
 pip install Flask-Cors
 ```
 <p>for React part</p>
-```command
+```
 npm install react-scripts --save
 ```
 <br>
-```command
+```
 npm install axios
 ```
 </br></br>
 <h1>To launch the app:</h1></br></br>
 <h2>First launch Flask</h2><br>
 <p>Go to the file Clouds_Detector :</p>
-```command
+```
 cd Clouds_Detector
 ```
 <p>Run :</p>
