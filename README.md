@@ -12,7 +12,7 @@ for windows:
 ```
 py -3 -m venv venv
 ```
-<h2>Activate venv</h2></br></br>
+<h2>Activate venv</h2>
 
 <p>for macOS/Linux:</p>
 ```
@@ -23,7 +23,7 @@ py -3 -m venv venv
 venv\Scripts\activate
 ```
 </br></br>
-<h2>If necessary, install all these:</h2></br></br>
+<h2>If necessary, install all these:</h2>
 <p>for Flask part:</p>
 ```
 pip install flask
@@ -41,8 +41,8 @@ npm install react-scripts --save
 npm install axios
 ```
 </br></br>
-<h1>To launch the app:</h1></br></br>
-<h2>First launch Flask</h2><br>
+<h1>To launch the app:</h1>
+<h2>First launch Flask</h2>
 <p>Go to the file Clouds_Detector :</p>
 ```
 cd Clouds_Detector
@@ -51,7 +51,7 @@ cd Clouds_Detector
 ```
 flask run
 ```
-<h2>Second, launch React</h2><br>
+<h2>Second, launch React</h2>
 <p>Go to the file Cloud_React :</p>
 ```
 cd Cloud_React
