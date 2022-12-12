@@ -55,10 +55,12 @@ flask run
 ```
 <h2>Second, launch React</h2>
 Go to the file Cloud_React :
+
 ```
 cd Cloud_React
 ```
 Run :
+
 ```
 npm start
 ```
