@@ -4,11 +4,12 @@ Project which detects clouds and classify them
 <h2>Install a venv (Virtual Environment)</h2>
 
 <p>for macOS/Linux:</p>
-```command
+```
 python3 -m venv venv
 ```
+<br>
 <p>for windows:</p>
-```command
+```
 py -3 -m venv venv
 ```
 <h2>Activate venv</h2></br></br>
