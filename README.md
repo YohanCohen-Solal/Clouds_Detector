@@ -46,9 +46,11 @@ npm install axios
 <h1>To launch the app:</h1>
 <h2>First launch Flask</h2>
 Go to the file Clouds_Detector :
+
 ```
 cd Clouds_Detector
 ```
+
 Run :
 ```
 flask run
