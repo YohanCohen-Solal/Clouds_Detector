@@ -10,7 +10,7 @@ IMAGE_DATASET_PATH = os.path.join(DATASET_PATH, "images")
 MASK_DATASET_PATH = os.path.join(DATASET_PATH, "masks")
 
 # define the test split
-TEST_SPLIT = 0.15
+TEST_SPLIT = 0.25
 
 # determine the device to be used for training and evaluation
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
