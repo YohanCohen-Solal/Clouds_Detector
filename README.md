@@ -9,17 +9,17 @@ python3 -m venv venv
 ```
 
 for windows:
-```command
+```
 py -3 -m venv venv
 ```
 
 <h2>Activate venv</h2>
 
-<p>for macOS/Linux:</p>
+for macOS/Linux:
 ```
 . venv/bin/activate
 ```
-<p>for windows:</p>
+for windows:
 ```
 venv\Scripts\activate
 ```
