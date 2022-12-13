@@ -1,7 +1,7 @@
-my_checkpoint.pth.tar
+WebApp/client_react/.idea
 
 # just in case
-/IA/my_checkpoint.pth.tar 
+/IA/my_checkpoint.pth.h5 
 /WebApp/node_modules
 
 # Byte-compiled / optimized / DLL files
