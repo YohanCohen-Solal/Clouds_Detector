@@ -1,4 +1,4 @@
-my_checkpoint.pth.tar
+my_checkpoint.pth.h5
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
