@@ -14,3 +14,7 @@ variable "region" {
   description = "The AWS region"
   default     = "us-east-1"
 }
+variable "s3_user_bucket_name" {
+  description = "Nom du bucket"
+  type        = string
+}

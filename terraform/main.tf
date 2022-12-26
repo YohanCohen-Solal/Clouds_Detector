@@ -37,24 +37,22 @@ resource "aws_security_group" "sg" {
   }
 }
 
-resource "local_exec" "configure_server" {
-  depends_on = [aws_instance.web_server]
-  command     = "ansible-playbook -i 'localhost,' -c local configure.yml"
+resource "aws_s3_bucket" "example" {
+  bucket = "my-tf-example-bucket"
 }
 
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-bucket"
+resource "aws_s3_bucket_acl" "example_bucket_acl" {
+  bucket = aws_s3_bucket.example.id
   acl    = "private"
 }
 
-resource "aws_s3_bucket_object" "model1" {
-  bucket = aws_s3_bucket.my_bucket.id
-  key    = "model1.pkl"
-  source = "path/to/model1.pkl"
-}
+resource "aws_s3_bucket_object" "object" {
+  bucket = aws_s3_bucket.example.id
+  key    = "model.h5"
+  source = "C:/Users/victo/Desktop/Cours/Projet-Cloud-Detect/Clouds_Detector/my_checkpoint.pth.h5"
 
-resource "aws_s3_bucket_object" "model2" {
-  bucket = aws_s3_bucket.my_bucket.id
-  key    = "model2.pkl"
-  source = "path/to/model2.pkl"
+  # The filemd5() function is available in Terraform 0.11.12 and later
+  # For Terraform 0.11.11 and earlier, use the md5() function and the file() function:
+  # etag = "${md5(file("path/to/file"))}"
+  etag = filemd5("C:/Users/victo/Desktop/Cours/Projet-Cloud-Detect/Clouds_Detector/my_checkpoint.pth.h5")
 }
