@@ -5,6 +5,19 @@ my_checkpoint.pth.h5
 /IA/my_checkpoint.pth.tar 
 /WebApp/node_modules
 
+# Ignore Terraform state files
+terraform/*.tfstate
+terraform/*.tfstate.*
+
+# Ignore Terraform variable files
+terraform/*.tfvars
+
+# Ignore Terraform backup files
+terraform/*.backup
+
+# Ignore the .terraform directory
+terraform/.terraform/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
