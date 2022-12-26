@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from 'react';
 import './App.css';
+//import React from 'react';
+import Dropzone from './Dropzone';
+import React, { useState, useEffect } from "react";
+import api from "./api";
 
 function App() {
-  const [data, setData] = useState(0);
+  const [response, setResponse] = useState("");
 
   useEffect(() => {
-    fetch('/')
-    .then(res => res.json())
-    .then(data => {
-      setData(data);
-      console.log(data)
-    });
+    api
+      .get("/")
+      .then(res => {
+        setResponse(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-
-        ... no changes in this part ...
-
-        <p>The current time is {data}.</p>
+        <h1 id="typo_ombre">Cloud Detector</h1>
+        <p id="typo_ombre">Principle : Insert an image of cloud and we will tell you which type it is</p>
+        <Dropzone />
+        <h3>The type of cloud is : </h3>
+        <p>{response}</p>
       </header>
     </div>
   );
 }
 
 export default App;
-
-// fetch(url).then((response) => {
-//   // La req
-// }).catch((error) => {
-//   console.log(error)
-// });
