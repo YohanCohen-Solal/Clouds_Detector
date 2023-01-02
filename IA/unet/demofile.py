@@ -12,7 +12,7 @@ model_segmentation = UNet(n_channels=3, n_classes=1)
 model_segmentation.load_state_dict(torch.load('my_checkpoint.pth.h5')['state_dict'])
 
 model_classification=ConvNet(num_classes=11)
-model_classification.load_state_dict(torch.load('best_checkpoint.model'))
+model_classification.load_state_dict(torch.load('best_checkpoint.h5'))
 
 
 img_path = "IA/Data/altocumulus/image14.jpeg"
@@ -27,9 +27,7 @@ to_tensor = transforms.ToTensor()
 tensor_image = to_tensor(pil_image)
 tensor_image = tensor_image.unsqueeze(0)
 preds = torch.sigmoid(model_segmentation(tensor_image))
-print(preds.shape)
 preds = torch.cat((preds, preds, preds), dim=1)
-print(preds.shape)
 output = model_classification(preds)
 
 prediction = output.argmax()
